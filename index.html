@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -21,14 +21,11 @@
       </header>
       <main class="content">
         <section class="profile page__section">
-          <div
-            class="profile__image"
-            style="background-image: url('./src/images/avatar.jpg')"
-          ></div>
+          <div class="profile__image"></div>
           <div class="profile__info">
-            <h1 class="profile__title">Жак-Ив Кусто</h1>
+            <h1 class="profile__title"></h1>
             <button class="profile__edit-button" type="button"></button>
-            <p class="profile__description">Исследователь океана</p>
+            <p class="profile__description"></p>
           </div>
           <button class="profile__add-button" type="button"></button>
         </section>
@@ -139,12 +136,7 @@
           <button type="button" class="popup__close"></button>
           <h3 class="popup__title">Вы уверены?</h3>
           <form class="popup__form" name="remove-card" novalidate>
-            <button
-              type="submit"
-              class="button popup__button"
-            >
-              Да
-            </button>
+            <button type="submit" class="button popup__button">Да</button>
           </form>
         </div>
       </div>
@@ -161,6 +153,7 @@
                 id="user-avatar"
                 class="popup__input popup__input_type_avatar"
                 placeholder="Ссылка на изображение"
+                required
               />
               <span class="popup__error" id="user-avatar-error"></span>
             </label>
@@ -193,8 +186,10 @@
       <li class="places__item card">
         <img class="card__image" src="" alt="" />
         <div class="card__control">
-          <button type="button" class="card__control-button card__control-button_type_info"></button>
-          <button type="button" class="card__control-button card__control-button_type_delete"></button>
+          <button
+            type="button"
+            class="card__control-button card__control-button_type_delete"
+          ></button>
         </div>
         <div class="card__description">
           <h2 class="card__title"></h2>

@@ -48,7 +48,7 @@ const avatarFormModalWindow = document.querySelector(".popup_type_edit-avatar");
 const avatarForm = avatarFormModalWindow.querySelector(".popup__form");
 const avatarInput = avatarForm.querySelector(".popup__input");
 
-const removeCardModalWindow = document.querySelector(".popup_tupe_remove-card");
+const removeCardModalWindow = document.querySelector(".popup_type_remove-card");
 const removeCardForm = removeCardModalWindow.querySelector(".popup__form");
 
 const usersStatusModalWindow = document.querySelector(".popup_type_info");
@@ -101,7 +101,7 @@ const handleProfileFormSubmit = (evt) => {
 
 const handleAvatarFromSubmit = (evt) => {
   evt.preventDefault();
-  const submitButton = profileForm.querySelector(".popup__button");
+  const submitButton = avatarForm.querySelector(".popup__button");
   renderLoading(submitButton, true, "Сохранить");
 
   setUserAvatar(avatarInput.value)
@@ -121,7 +121,7 @@ const handleAvatarFromSubmit = (evt) => {
 
 const handleCardFormSubmit = (evt) => {
   evt.preventDefault();
-  const submitButton = profileForm.querySelector(".popup__button");
+  const submitButton = cardForm.querySelector(".popup__button");
   renderLoading(submitButton, true, "Создать");
 
 addNewCard({
@@ -136,7 +136,6 @@ addNewCard({
         onPreviewPicture: handlePreviewPicture,
         onLikeIcon: likeCard,
         onDeleteCard: handleDeleteClick,
-        onInfoClick: handleInfoClick,
       },
       currentUserId
     )
@@ -161,7 +160,7 @@ const handleDeleteClick = (cardElement, cardId) => {
 
 const handleRemoveCardFormSubmit = (evt) => {
   evt.preventDefault();
-  const submitButton = profileForm.querySelector(".popup__button");
+  const submitButton = removeCardForm.querySelector(".popup__button");
   renderLoading(submitButton, true, "Да");
 
   deleteCardFromServer(cardToDelete)
